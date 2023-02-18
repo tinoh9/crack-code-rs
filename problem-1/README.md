@@ -1,4 +1,4 @@
-# 🏝️ Number of islands
+# 🏝️ Problem 1: Number of islands
 
 You have a map based off a grid of size X by Y. Each grid cell is either marked as land or sea.
 Assuming all around the grid is sea, your job is to calculate the number of islands on the map.
