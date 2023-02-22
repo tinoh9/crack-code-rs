@@ -11,8 +11,6 @@ The board is made up of an `m x n` grid of cells, where each cell has an initial
 
 The next state is created by applying the above rules simultaneously to every cell in the current state, where births and deaths occur simultaneously. Given the current state of the `m x n` grid board, return the next state.
 
-In this problem, given an initial state compute the next state.
-
 ## Example
 
 The state on the left gives the one on the right as the next state.
@@ -28,3 +26,8 @@ The state on the left gives the one on the right as the next state.
 1 1 -> 1 1
 1 0    1 1
 ```
+
+## Task
+Based on the given initial state, computing the next state.
+
+Source: by Jim Bennett & Ryan Levick
