@@ -3,8 +3,45 @@ enum CellState {
     Alive,
 }
 
-fn calc_next_board_state(board: &Vec<Vec<CellState>>) -> Vec<Vec<CellState>> {
+fn should_cell_live(board: &Vec<Vec<CellState>>, row: usize, col: usize) -> bool {
 
+}
+
+fn should_cell_be_born(board: &Vec<Vec<CellState>>, row: usize, col: usize) -> bool {
+
+}
+
+
+fn calc_next_board_state(board: &Vec<Vec<CellState>>) -> Vec<Vec<CellState>> {
+    let mut output = Vec::<Vec<CellState>>::new();
+
+    for row in 0..board.len() {
+        let mut new_row = Vec::<CellState>::new();
+
+        for col in 0..board[row].len() {
+            let cell = board[row][col];
+            match cell {
+                CellState::Alive => {
+                    if should_cell_live(&board, row, col) {
+                        new_row.push(CellState::Alive);
+                    } else {
+                        new_row.push(CellState::Dead);
+                    }
+                }
+                CellState::Dead => {
+                    if should_cell_be_born(&board, row, col) {
+                        new_row.push(CellState::Alive);
+                    } else {
+                        new_row.push(CellState::Dead);
+                    }
+                }
+            }
+        }
+
+        output.push(new_row);
+    }
+
+    output
 }
 
 #[cfg(test)]
